@@ -149,7 +149,7 @@ h6 {
 */
 .get-started-btn {
   margin-left: 22px;
-  background: #5fcf80;
+  background: #db0898;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px;
@@ -157,10 +157,12 @@ h6 {
   transition: 0.3s;
   font-size: 14px;
   display: inline-block;
+  transition: 2s ease-in-out;
+  transform: rotate3d(360);
 }
 
 .get-started-btn:hover {
-  background: #3ac162;
+  background: #17f3cb;
   color: #fff;
 }
 
@@ -855,13 +857,13 @@ section {
   margin: 0 2px;
 }
 
-/*--------------------------------------------------------------
+/* /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials .testimonial-wrap {
+/* .testimonials .testimonial-wrap {
   padding-left: 50px;
-}
-
+} */
+/* 
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
@@ -958,7 +960,7 @@ section {
     position: static;
     left: auto;
   }
-}
+} */ */
 
 /*--------------------------------------------------------------
 # Cource Details
@@ -1607,4 +1609,8 @@ section {
 }
 #trainer_img{
   height: 400px;
+}
+.notice_img{
+  width: 800px;
+  height: 500px;
 }

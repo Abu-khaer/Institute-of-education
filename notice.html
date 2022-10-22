@@ -49,62 +49,334 @@
           <li><a href="trainers.html">Trainers</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a class="active" href="notice.html">Notice</a></li>
-
-          
           <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown"><a href="#"><span>Enrollment</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#teacher_enroll">As Teachers</a></li>
+                  <li><a href="#teacher_enroll">As Stuff</a></li>
+              
+             
+              
+             
+            </ul>
+
+         
+         
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-
+      
 
     </div>
   </header><!-- End Header -->
+  
 
   <main id="main">
+    
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>Notice</h2>
+        <h2>Notice Board</h2>
         <p>We are looking For experienced teacher. to send your CV , Contact us via bellow address </p>
       </div>
     </div>
 
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger float-xxl-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Click Here For Email
- </button>
- 
- <!-- Modal -->
- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h1 class="modal-title fs-5" id="exampleModalLabel">Copy Email</h1>
-         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-       </div>
-       <div class="modal-body">
-         <h2>insedubd23@gmail.com</h2>
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-info" data-bs-dismiss="modal">Got it</button>
-         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-       </div>
-     </div>
-   </div>
- </div>
-  <div class="col-lg-12 col-md-6 d-flex align-items-stretch">
-    <div class="course-item">
-      <img src="assets/img/notice.png" class="img-fluid" alt="...">
-      <div class="course-content">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h4></h4>
-          
+   
+</main><!-- End #main -->
+<div class="marquee">
+  <marquee behavior="scroll" direction="fade-left"><h4>Notice:  Last date of submission for Students:
+    15 December, 2022. --  Last Date of teacher and stuff application 31 October 2022.</h4></marquee>
+</div>
+
+<a class="btn btn-danger" href="#teacher_enroll">Click Here To get form</a>
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-lg-5">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title text-danger bg-gradient text-center"><h1>**Admission notice** </h1></div>
+        </div>
+        <div class="card-header">
+          <div class="card-title text-success bg-warning text-center"><h3>Application For Students </h3></div>
+        </div>
+        <div class="card-body">
+          <p>Newly established Institute of Education (IE) is inviting applications for the enrollment into the Class of: 
+
+           <ol>
+            <li>KG</li>
+            <li>Standard 1</li>
+            <li>Standard</li>
+            <li>Standard</li>
+            <li>Standard</li>
+            <li>Standard</li>
+            
+           </ol>
+
+            * Each class will be consists of 20 students only.<br>
+            
+            * 2 students in each class will get full tuition waive from their next class based on merit and financial status<br>
+            
+            * Interested guardians can collect application form from office of IE physically or by downloading the form from the website of IE www.insedubd.org.<br>
+            
+            ** Last date of submission: <br>
+            15 December, 2022<br>
+            
+            Application form can be submitted through email<br>
+            insedubd23@gmail.com</p>
         </div>
       </div>
     </div>
-  </div> 
-</main><!-- End #main -->
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title text-danger bg-gradient text-center"><h1>** Application Notice **</h1></div>
+          <div class="card-header">
+            <div class="card-title text-success bg-warning text-center"><h3>View Of Requirements </h3></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <img src="assets/img/notice.png" class="notice_img" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="teacher" id="teacher_enroll">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header bg-danger">
+            <div class="card-title text-center text-light"><h2>Teachers Application Form</h2></div>
+          </div>
+          <div class="card-body">
+            <form action="" method="post">
+              <div class="mb-3">
+                <input type="text" name="name" class="form-control" placeholder="Candidate Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="mother_name" class="form-control" placeholder="Mothers_name" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="father_name" class="form-control" placeholder="fathers_name " required>
+              </div>
+              <div class="mb-3">
+                <input type="number" name="nid" class="form-control" placeholder="NID Number " required>
+              </div>
+              <div class="mb-3">
+                <label for="">Educational Qualification</label><br>
+                SSC 
+                <select name="" id="" class="form-control">
+                  <option value="option">Select Board</option>
+                <option value="option">Dhaka</option>
+                <option value="option">Rajshahi</option>
+                <option value="option">Khulna</option>
+                <option value="option">Sylhet</option>
+                <option value="option">Comilla</option>
+                <option value="option">Mymensingh</option>
+                <option value="option">Barishal</option>
+                <option value="option">Rangpur</option>
+                <option value="option">Madrasha</option>
+                </select>
+  
+                <!-- result -->
+                Result 
+                <select name="" id=""class="form-control">
+                  <option value="option">Select Result</option>
+                <option value="option">A+</option>
+                <option value="option">A</option>
+                </select>
+              </div>
+              <!-- HSC SECTION -->
+  
+  
+              <div class="mb-3">
+                <label for="">Educational Qualification</label><br>
+                HSC
+                <select name="" id="" class="form-control">
+                  <option value="option">Select Board</option>
+                <option value="option">Dhaka</option>
+                <option value="option">Rajshahi</option>
+                <option value="option">Khulna</option>
+                <option value="option">Sylhet</option>
+                <option value="option">Comilla</option>
+                <option value="option">Mymensingh</option>
+                <option value="option">Barishal</option>
+                <option value="option">Rangpur</option>
+                <option value="option">Madrasha</option>
+                </select>
+  
+                <!-- result -->
+                Result
+                <select name="" id="" class="form-control">
+                  <option value="option">Select Result</option>
+                <option value="option">A+</option>
+                <option value="option">A</option>
+                </select>
+              </div>
+  
+              <!-- END HSC SECTION -->
+              <!-- honors SECTION -->
+              <div class="mb-3">
+                <label for="">Educational Qualification</label><br>
+                Graduation 
+                <select name="" id="" class="form-control">
+                  <option value="option">Select Board</option>
+                <option value="option">Dhaka University</option>
+                <option value="option">Rajshahi University</option>
+                <option value="option">Khulna University</option>
+                <option value="option">Sylhet University</option>
+                <option value="option">Comilla University</option>
+                <option value="option">Mymensingh University</option>
+                <option value="option">Barishal University</option>
+                <option value="option">Rangpur University</option>
+                <option value="option">National University</option>
+                </select> <br>
+  
+                <!-- result -->
+                Result
+                <select name="" id="" class="form-control">
+                  <option value="option">Select Result</option>
+                <option value="option">Fist Class</option>
+                <option value="option">Second Class</option>
+                </select>
+              </div>
+  
+               <!--end honors SECTION -->
+  
+               <!--Masters SECTION -->
+               <div class="mb-3">
+                <label for="">Educational Qualification</label><br>
+                Masters 
+                <select name="" id="" class="form-control">
+                  <option value="option">Select Board</option>
+                <option value="option">Dhaka University</option>
+                <option value="option">Rajshahi University</option>
+                <option value="option">Khulna University</option>
+                <option value="option">Sylhet University</option>
+                <option value="option">Comilla University</option>
+                <option value="option">Mymensingh University</option>
+                <option value="option">Barishal University</option>
+                <option value="option">Rangpur University</option>
+                <option value="option">National University</option>
+                </select>
+  
+                <!-- result -->
+                Result
+                <select name="" id="" class="form-control">
+                  <option value="option">Select Result</option>
+                <option value="option">First Class</option>
+                <option value="option">Second Class</option>
+                </select>
+              </div>
+  
+               <!--end master SECTION -->
+  
+  
+              <div class="mb-3">
+                <input type="number" name="brc" class="form-control" placeholder="Birth Registration certificate" required>
+              </div>
+              <div class="mb-3">
+                <input type="number" name="mobile" class="form-control" placeholder="Mobile Number" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="email" class="form-control" placeholder="Input Your Email number" >
+              </div>
+              <div class="mb-3">
+                <input type="submit" name="submit" value="Save Data" class="form-control btn btn-info" >
+              </div>
+            </form>
+            <div class="mb-3">
+              <p>After Completing this form . Send your CV through Email.</p>
+              <strong><a href="https://mail.google.com/mail/u/0/#inbox?compose=new">insedubd23@gmail.com</a></strong>
+              <p>Thank you</p>
+            </div>
+            
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header bg-warning">
+            <div class="card-title text-center text-light"><h2>Stuff Application Form</h2></div>
+          </div>
+          <div class="card-body">
+            <form action="" method="post">
+              <div class="mb-3">
+                <input type="text" name="name" class="form-control" placeholder="Candidate Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="mother_name" class="form-control" placeholder="Mothers_name" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="father_name" class="form-control" placeholder="fathers_name " required>
+              </div>
+              <div class="mb-3">
+                <input type="number" name="nid" class="form-control" placeholder="NID Number " required>
+              </div>
+              <div class="mb-3">
+                <label for="">Educational Qualification</label><br>
+                SSC 
+                <select name="" id="" class="form-control">
+                  <option value="option">Select Board</option>
+                <option value="option">Dhaka</option>
+                <option value="option">Rajshahi</option>
+                <option value="option">Khulna</option>
+                <option value="option">Sylhet</option>
+                <option value="option">Comilla</option>
+                <option value="option">Mymensingh</option>
+                <option value="option">Barishal</option>
+                <option value="option">Rangpur</option>
+                <option value="option">Madrasha</option>
+                </select>
+  
+                <!-- result -->
+                Result 
+                <select name="" id=""class="form-control">
+                  <option value="option">Select Result</option>
+                <option value="option">A+</option>
+                <option value="option">A</option>
+                <option value="option">A-</option>
+                <option value="option">B</option>
+                <option value="option">C</option>
+                </select>
+              </div>
+              
+  
+  
+              <div class="mb-3">
+                <input type="number" name="brc" class="form-control" placeholder="Birth Registration certificate" required>
+              </div>
+              <div class="mb-3">
+                <input type="number" name="mobile" class="form-control" placeholder="Mobile Number" required>
+              </div>
+             
+              <div class="mb-3">
+                <input type="submit" name="submit" value="Save Data" class="form-control btn btn-info" >
+              </div>
+            </form>
+            <div class="mb-3">
+              <p>After Completing this form . Send your CV through Email.</p>
+              <strong>insedubd23@gmail.com</strong>
+              <p>Thank you</p>
+            </div>
+            
+              
+           
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+         
+
+</section>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
