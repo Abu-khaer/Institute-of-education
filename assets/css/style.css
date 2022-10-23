@@ -1614,3 +1614,9 @@ section {
   width: 800px;
   height: 500px;
 }
+/* standard gallary image */
+#std_img{
+  height: 300px;
+  width: 390px;
+
+}
