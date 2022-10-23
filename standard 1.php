@@ -1,3 +1,36 @@
+<?php
+include_once 'config/db.php';
+
+if(isset($_POST['submit'])){
+
+  $name =stripslashes($_POST['name']);
+  $name = mysqli_real_escape_string($conn, $name);
+  $mother_name = stripslashes($_POST['mother_name']);
+  $mother_name = mysqli_real_escape_string($conn, $mother_name);
+  $father_name = stripslashes($_POST['father_name']);
+  $father_name = mysqli_real_escape_string($conn, $father_name);
+  $brc = stripslashes($_POST['brc']);
+  $brc = mysqli_real_escape_string($conn, $brc);
+
+
+
+    $query = "INSERT INTO student (name, mother_name, father_name, brc) VALUES ('$name', '$mother_name', '$father_name', '$brc')";
+
+    $result = mysqli_query($conn, $query);
+
+    if(($result)){
+     echo  "Enroll Successfull";
+    }else {
+      echo "Something went wrong";
+    }
+
+  
+ }
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +38,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>KG - INSTITUTE OF EDUCATION</title>
+  <title>Standard 1 - INSTITUTE OF EDUCATION</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -49,8 +82,8 @@
             <ul>
               <li class="dropdown"><a href="#"><span>Students</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a class="active" href="kg.html">KG</a></li>
-                  <li><a href="standard 1.html">Standard 1</a></li>
+                  <li><a  href="kg.html">KG</a></li>
+                  <li><a class="active" href="standard 1.html">Standard 1</a></li>
                   <li><a href="standard 2.html">Standard 2</a></li>
                   <li><a href="standard 3.html">Standard 3</a></li>
                   <li><a href="standard 4.html">Standard 4</a></li>
@@ -107,7 +140,7 @@
             <input type="text" name="mother_name" class="form-control" placeholder="Mothers_name" required>
           </div>
           <div class="mb-3">
-            <input type="text" name="mother_name" class="form-control" placeholder="Mothers_name " required>
+            <input type="text" name="father_name" class="form-control" placeholder="fathers_name " required>
           </div>
           <div class="mb-3">
             <input type="number" name="brc" class="form-control" placeholder="Birt Registration certificate" required>
@@ -127,6 +160,8 @@
    
 
   </main><!-- End #main -->
+
+
   <section class="kg" id="kg_class">
     <div class="container">
       <div class="row ">
@@ -202,6 +237,8 @@
    
   </div>
   </section>
+ 
+  
  
   <!-- ======= Footer ======= -->
   <footer id="footer">
