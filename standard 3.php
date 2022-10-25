@@ -149,14 +149,15 @@ if(isset($_POST['submit'])){
             <input type="number" name="brc" class="form-control" placeholder="Birth Registration certificate" required>
           </div>
           <div class="mb-3">
-            
+          <input type="submit" name="submit" value="Save Data" class="form-control btn btn-info" >
+          </form>
           </div>
        
       </div>
       <div class="modal-footer">
-        <input type="submit" name="submit" value="Save Data" class="form-control btn btn-info" >
+        
       </div>
-    </form>
+   
     </div>
   </div>
 </div>

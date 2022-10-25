@@ -19,17 +19,13 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($conn, $query);
 
     if(($result)){
-     echo  "Enroll Successfull";
+     echo  " alert(Enroll Successfull)";
     }else {
       echo "Something went wrong";
     }
 
   
  }
-
-
-
-
 ?>
 
 
