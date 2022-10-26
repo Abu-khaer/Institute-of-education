@@ -9,12 +9,16 @@ if(isset($_POST['submit'])){
   $mother_name = mysqli_real_escape_string($conn, $mother_name);
   $father_name = stripslashes($_POST['father_name']);
   $father_name = mysqli_real_escape_string($conn, $father_name);
+
+  $class = stripslashes($_POST['class']);
+  $class = mysqli_real_escape_string($conn, $class);
+
   $brc = stripslashes($_POST['brc']);
   $brc = mysqli_real_escape_string($conn, $brc);
 
 
 
-    $query = "INSERT INTO student (name, mother_name, father_name, brc) VALUES ('$name', '$mother_name', '$father_name', '$brc')";
+    $query = "INSERT INTO student (name, mother_name, father_name, class, brc) VALUES ('$name', '$mother_name', '$father_name', '$class', '$brc')";
 
     $result = mysqli_query($conn, $query);
 
@@ -26,35 +30,49 @@ if(isset($_POST['submit'])){
 
   
  }
-
-
-
-
 ?>
 
-
+<!-- student form -->
 <?php
+
 include_once 'config/db.php';
 
-if(isset($_POST['submit'])){
+if(isset($_POST['send'])){
 
-  $name =stripslashes($_POST['name']);
-  $name = mysqli_real_escape_string($conn, $name);
-  $mother_name = stripslashes($_POST['mother_name']);
-  $mother_name = mysqli_real_escape_string($conn, $mother_name);
-  $father_name = stripslashes($_POST['father_name']);
-  $father_name = mysqli_real_escape_string($conn, $father_name);
-  $brc = stripslashes($_POST['brc']);
-  $brc = mysqli_real_escape_string($conn, $brc);
+  $father_nid =stripslashes($_POST['father_nid']);
+  $father_nid = mysqli_real_escape_string($conn, $father_nid);
+
+  $mother_nid =stripslashes($_POST['mother_nid']);
+  $mother_nid = mysqli_real_escape_string($conn, $mother_nid);
 
 
+  $edu_qua_father = stripslashes($_POST['edu_qua_father']);
+  $edu_qua_father = mysqli_real_escape_string($conn, $edu_qua_father);
 
-    $query = "INSERT INTO student (name, mother_name, father_name, brc) VALUES ('$name', '$mother_name', '$father_name', '$brc')";
+  $edu_qua_mother = stripslashes($_POST['edu_qua_mother']);
+  $edu_qua_mother = mysqli_real_escape_string($conn, $edu_qua_mother);
+
+
+  $mobile_father = stripslashes($_POST['mobile_father']);
+  $mobile_father = mysqli_real_escape_string($conn, $mobile_father);
+
+  $mobile_mother = stripslashes($_POST['mobile_mother']);
+  $mobile_mother = mysqli_real_escape_string($conn, $mobile_mother);
+
+  $email_father = stripslashes($_POST['email_father']);
+  $email_father = mysqli_real_escape_string($conn, $email_father);
+
+
+  $email_mother = stripslashes($_POST['email_mother']);
+  $email_mother = mysqli_real_escape_string($conn, $email_mother);
+
+
+    $query = "INSERT INTO parents_info (father_nid, mother_nid, edu_qua_father, edu_qua_mother, mobile_father, mobile_mother, email_father, email_mother) VALUES ('$father_nid', '$mother_nid', '$edu_qua_father', '$edu_qua_mother', '$mobile_father', '$mobile_mother' '$email_father', '$email_mother')";
 
     $result = mysqli_query($conn, $query);
 
     if(($result)){
-     echo  "Enroll Successfull";
+     header('Location: index.html');
     }else {
       echo "Something went wrong";
     }
@@ -62,12 +80,7 @@ if(isset($_POST['submit'])){
   
  }
 
-
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -76,13 +89,13 @@ if(isset($_POST['submit'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Standard 3 - INSTITUTE OF EDUCATION</title>
+  <title>Addmission - INSTITUTE OF EDUCATION</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -96,7 +109,7 @@ if(isset($_POST['submit'])){
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!--  CSS File -->
+  <!--  Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
   
@@ -104,7 +117,7 @@ if(isset($_POST['submit'])){
 
 <body>
 
-  <!-- ======= Header ======= -->
+  <!--  Header  -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
@@ -114,63 +127,77 @@ if(isset($_POST['submit'])){
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="index.html">Home</a></li>
-
-          <li class="dropdown"><a href="#"><span>Classes</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li class="dropdown"><a href="#"><span>Students</span> <i class="bi bi-chevron-right"></i></a>
+          <li><a  href="index.html">Home</a></li>
+          <li><a  href="courses.html">Gallery</a></li>
+          <li class="dropdown"><a href="#"><span>Students</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
-                  <li><a  href="kg.php">KG</a></li>
-                  <li><a href="standard 1.php">Standard 1</a></li>
-                  <li><a href="standard 2.php">Standard 2</a></li>
-                  <li><a class="active" href="standard 3.php">Standard 3</a></li>
-                  <li><a href="standard 4.php">Standard 4</a></li>
+                  <li><a href="kg.html">KG</a></li>
+                  <li><a href="standard 1.html">Standard 1</a></li>
+                  <li><a href="standard 2.html">Standard 2</a></li>
+                  <li><a href="standard 3.html">Standard 3</a></li>
+                  <li><a href="standard 4.html">Standard 4</a></li>
                   <li><a href="standard 5.html">Standard 5</a></li>
                 </ul>
-              </li>
-             
+         
+              
+          </li>
+          <li class="dropdown"><a href="#"><span>Appointment</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="appoint/teacher.php">Teacher</a></li>
+              <li><a href="appoint/stuff.php">Stuff</a></li>
              
             </ul>
           </li>
+          <li><a href="about.html">About</a></li>    
+          <li><a href="trainers.html">Teachers</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a class="active" href="notice.html">Notice</a></li>
+
+         
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
+        
+      </nav><!-- .navbar -->
 
-      <button type="button" class="get-started-btn  btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Enroll Now
-      </button>
+      
 
     </div>
-    
   </header><!-- End Header -->
+  
 
   <main id="main">
     
-
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>Standard 3</h2>
-        <p>This is primary section Of our Grade level.
-          student play and enjoy here and learn some basic point of study. </p>
+        <h2>Addmission Form</h2>
+        <p>WStudents Addmission form KG to Standard 5. </p>
       </div>
-    </div><!-- End Breadcrumbs -->
+    </div>
 
-<!-- Button trigger modal -->
+   
+</main><!-- End #main -->
+<div class="marquee">
+  <marquee behavior="scroll" direction="fade-left"><h4>Notice:  Last date of submission for Students:
+    15 December, 2022. --  Last Date of Teachers and stuff's application 31 October 2022.</h4></marquee>
+</div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Student Applicant Form</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="" method="post">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+     <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed bg-warning text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+      Application form for students <a class="btn btn-danger float-end " href="#">Click Here</a>
+      </button>
+      </h2>
+       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+      <form action="" method="post">
           <div class="mb-3">
             <input type="text" name="name" class="form-control" placeholder="Student Name" required>
           </div>
@@ -178,40 +205,52 @@ if(isset($_POST['submit'])){
             <input type="text" name="mother_name" class="form-control" placeholder="Mothers_name" required>
           </div>
           <div class="mb-3">
-            <input type="text" name="father_name" class="form-control" placeholder="fathers_name " required>
+            <input type="text" name="father_name" class="form-control" placeholder="Fathers_name " required>
           </div>
           <div class="mb-3">
             <input type="number" name="brc" class="form-control" placeholder="Birth Registration certificate" required>
           </div>
+
           <div class="mb-3">
-          <input type="submit" name="submit" value="Save Data" class="form-control btn btn-info" >
-          </form>
+          <label for="">Desire to get admission into -</label><br>
+            <select name="class" id="">
+              
+            <option value="">Select Grade</option>
+              <option value="kg">KG</option>
+              <option value="standard 1">standard 1</option>
+              <option value="standard 2">standard 2</option>
+              <option value="standard 3">standard 3</option>
+              <option value="standard 4">standard 4</option>
+              <option value="standard 5">standard 5</option>
+            </select>
           </div>
-       
+
+          <div class="mb-3">
+          <input type="submit" name="submit" value="Enroll" class="form-control btn btn-info" >
+          </div>
+          </form>
+          
+          </div>
+           </div>
+         </div>
+  
+  
+        </div>
       </div>
-      <div class="modal-footer">
-        
-      </div>
-   
     </div>
-  </div>
-</div>
-   <!-- end modal 1 -->
 
-
-<!-- start modal 2 -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Information oF Applicant's Parents</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="" method="post">
+    <div class="col-lg-6">
+      <div class="card">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+     <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed bg-warning text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseOne">
+      Information of applicant's parents. <a class="btn btn-danger float-end " href="#">Click Here</a>
+      </button>
+     </h2>
+       <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+      <form action="" method="post">
           <div class="mb-3">
             <label for="">Father's NID Number</label>
             <input type="number" name="father_nid" class="form-control" placeholder="Father's NID numbers. " required>
@@ -260,103 +299,18 @@ if(isset($_POST['submit'])){
           </div>
           </form>
           
-       
+        </div>
+        </div>
+       </div>
+  
+  
+     </div>
       </div>
-      <div class="modal-footer">
-        
-      </div>
-   
     </div>
   </div>
 </div>
 
-
-<!-- end modal 2 -->
-
-
-  </main><!-- End #main -->
-  
-
-  <section class="kg" id="kg_class">
-    <div class="container">
-      <div class="row ">
-        <div class="col-lg-12">
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">Accademic Subject</div>
-              <div class="card-body  bg-success">
-                <ol class="text-warning">
-                  <li> Bangla </li>
-                  <li>English (Grammar and literature)</li>
-                  <li>Math</li>
-                  <li>Arabic and moral study</li>
-                  <li>Bangladesh studies</li>
-                  <li>International studies </li>
-                </ol>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <h1 class="text-center text-danger bg-warning mt-5">gallary</h1>
-        <div class="col-lg-4">
-       
-          <div class="card">
-            <div class="card-header bg-info">
-              <div class="card-title text-center text-danger">Class Picture</div>
-            </div>
-              <div class="card-body">
-                <img src="assets/img/gallary 3.jpg" id="std_img" alt="">
-
-              </div>
-            
-            <div class="card-footer">
-              <p>this is Anual events Programme</p>
-              <a href="#" class="btn btn-primary form-control">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-header  bg-info">
-              <div class="card-title text-center">Class Picture</div>
-            </div>
-              <div class="card-body">
-                <img src="assets/img/gallary 2.jpg" id="std_img" alt="">
-
-              </div>
-            
-            <div class="card-footer">
-              <p>this is Anual events Programme</p>
-              <a href="#" class="btn btn-primary form-control">Read More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-header  bg-info">
-              <div class="card-title text-center">Class Picture</div>
-            </div>
-              <div class="card-body">
-                <img src="assets/img/gallary 2.jpg" id="std_img" alt="">
-
-              </div>
-            
-            <div class="card-footer">
-              <p>this is Anual events Programme</p>
-              <a href="#" class="btn btn-primary form-control">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-   
-  </div>
-  </section>
- 
- 
-  <!-- ======= Footer ======= -->
+<!-- Footer  -->
   <footer id="footer">
 
     <div class="footer-top">
@@ -366,10 +320,10 @@ if(isset($_POST['submit'])){
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>INSTITUTE OF EDUCATION</h3>
             <p>
-              Parbatipur Upazilla <br>
-              Dinajpur <br>
-              Bangladesh <br><br>
-              <strong>Phone:</strong> +88 017100000<br>
+               <br>
+               Parbatipur Upazilla<br>
+              Dinajpur <br><br>
+              <strong>Phone:</strong> +88 01710000<br>
               <strong>Email:</strong> insedubd23@gmail.com<br>
             </p>
           </div>
@@ -389,7 +343,7 @@ if(isset($_POST['submit'])){
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>Share your valuable opinion to us.</p>
+            <p>Share your valuable Opinion to upgrade our quality.</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -405,7 +359,7 @@ if(isset($_POST['submit'])){
         <div class="copyright">
           &copy; Copyright <strong><span>INSTITUTE OF EDUCATION</span></strong>. All Rights Reserved
         </div>
-       
+        
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -420,14 +374,14 @@ if(isset($_POST['submit'])){
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!--  JS Files -->
+  <!--JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!--Main JS File -->
+  <!--JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>

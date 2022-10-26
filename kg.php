@@ -1,36 +1,4 @@
-<?php
-include_once 'config/db.php';
 
-if(isset($_POST['submit'])){
-
-  $name =stripslashes($_POST['name']);
-  $name = mysqli_real_escape_string($conn, $name);
-  $mother_name = stripslashes($_POST['mother_name']);
-  $mother_name = mysqli_real_escape_string($conn, $mother_name);
-  $father_name = stripslashes($_POST['father_name']);
-  $father_name = mysqli_real_escape_string($conn, $father_name);
-  $brc = stripslashes($_POST['brc']);
-  $brc = mysqli_real_escape_string($conn, $brc);
-
-
-
-    $query = "INSERT INTO student (name, mother_name, father_name, brc) VALUES ('$name', '$mother_name', '$father_name', '$brc')";
-
-    $result = mysqli_query($conn, $query);
-
-    if(($result)){
-     echo  "Enroll Successfull";
-    }else {
-      echo "Something went wrong";
-    }
-
-  
- }
-
-
-
-
-?>
 
 
 <!DOCTYPE html>
@@ -125,7 +93,7 @@ if(isset($_POST['submit'])){
 <!-- Button trigger modal -->
 
 
-<!-- Modal -->
+<!-- Modal
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -148,18 +116,19 @@ if(isset($_POST['submit'])){
             <input type="number" name="brc" class="form-control" placeholder="Birt Registration certificate" required>
           </div>
           <div class="mb-3">
-            
+          <input type="submit" name="submit" value="Enroll" class="form-control btn btn-info" >
           </div>
+          </form>
        
       </div>
       <div class="modal-footer">
-        <input type="submit" name="submit" value="Enroll" class="form-control btn btn-info" >
+       
       </div>
-    </form>
+    
     </div>
   </div>
 </div>
-   
+    -->
 
   </main><!-- End #main -->
   <section class="kg" id="kg_class">

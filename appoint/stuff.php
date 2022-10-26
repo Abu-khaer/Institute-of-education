@@ -21,39 +21,17 @@ if(isset($_POST['submit'])){
    $result_ssc = stripslashes($_POST['result_ssc']);
    $result_ssc = mysqli_real_escape_string($conn, $result_ssc);
 
-   $hsc = stripslashes($_POST['hsc']);
-   $hsc = mysqli_real_escape_string($conn, $hsc);
-
-   $hsc = stripslashes($_POST['hsc']);
-   $hsc = mysqli_real_escape_string($conn, $hsc);
-
-   $hsc_result = stripslashes($_POST['hsc_result']);
-   $hsc_result = mysqli_real_escape_string($conn, $hsc_result);
-
-  $graduation =stripslashes($_POST['graduation']);
-  $graduation = mysqli_real_escape_string($conn, $graduation);
-
-  $col_result =stripslashes($_POST['col_result']);
-   $col_result = mysqli_real_escape_string($conn, $col_result);
-
-   $master =stripslashes($_POST['master']);
-   $master = mysqli_real_escape_string($conn, $master);
-
-   $result =stripslashes($_POST['result']);
-   $result = mysqli_real_escape_string($conn, $result);
-
-  $phone =stripslashes($_POST['phone']);
+  $phone = stripslashes($_POST['phone']);
   $phone = mysqli_real_escape_string($conn, $phone);
 
-  
-  $email =stripslashes($_POST['email']);
+  $email = stripslashes($_POST['email']);
   $email = mysqli_real_escape_string($conn, $email);
-
+  
   $brc = stripslashes($_POST['brc']);
   $brc = mysqli_real_escape_string($conn, $brc);
 
 
-    $query = "INSERT INTO teacher (name, mother_name, father_name, nid, ssc, result_ssc, hsc, hsc_result, graduation, col_result, master, result, phone, email, brc) VALUES ('$name', '$mother_name', '$father_name', '$nid', '$ssc', '$result_ssc', '$hsc', '$hsc_result', '$graduation', '$col_result', '$master', '$result', '$phone', '$email', '$brc')";
+    $query = "INSERT INTO stuff (name, mother_name, father_name, nid, ssc, result_ssc, phone, email, brc) VALUES ('$name', '$mother_name', '$father_name', '$nid', '$ssc', '$result_ssc', '$phone', '$email', '$brc')";
 
     $result = mysqli_query($conn, $query);
 
@@ -153,12 +131,12 @@ if(isset($_POST['submit'])){
     </div>
   </header><!-- End Header -->
 
-  <main id="main">
+  <main id="main" class="bg-info">
 
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>Teachers Appointment</h2>
+        <h2>Stuff Appointment</h2>
         <p> </p>
       </div>
     </div><!-- End Breadcrumbs -->
@@ -170,7 +148,7 @@ if(isset($_POST['submit'])){
   <div class="accordion-item">
     <h2 class="accordion-header " id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-       <span class="text-bg-warning"><strong>Teachers Application Form.</strong> <a class="btn btn-danger btn-sm" href="#"> Click Here </a></span>
+       <span class="text-bg-warning"><strong>Stuff Application Form.</strong> <a class="btn btn-danger btn-sm" href="#"> Click Here </a></span>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
@@ -178,10 +156,10 @@ if(isset($_POST['submit'])){
         <div class="col-lg-6">
           <div class="card">
             <div class="card-header bg-danger">
-              <div class="card-title text-center text-light"><h2>Teachers Application Form</h2></div>
+              <div class="card-title text-center text-light"><h2>Stuff Application Form</h2></div>
             </div>
             <div class="card-body">
-              <form action="" method="post">
+            <form action="" method="post">
                 <div class="mb-3">
                   <input type="text" name="name" class="form-control" placeholder="Candidate Name" required>
                 </div>
@@ -194,37 +172,10 @@ if(isset($_POST['submit'])){
                 <div class="mb-3">
                   <input type="number" name="nid" class="form-control" placeholder="NID Number " required>
                 </div>
-                <div class="mb-3">
-                <label for=""></label>  SSC <br>
-                 
-                 <select name="ssc" id="" class="form-control">
-                   <option value="">Select Board</option>
-                 <option value="Dhaka">Dhaka</option>
-                 <option value="Rajshahi">Rajshahi</option>
-                 <option value="Khulna">Khulna</option>
-                 <option value="Sylhet">Sylhet</option>
-                 <option value="Comilla">Comilla</option>
-                 <option value="Mymensingh">Mymensingh</option>
-                 <option value="Barishal">Barishal</option>
-                 <option value="Rangpur">Rangpur</option>
-                 <option value="Madrasha">Madrasha</option>
-                 </select>
-   
-                 <!-- result -->
-                 Result
-                 <select name="result_ssc" id="" class="form-control">
-                   <option value="">Select Result</option>
-                 <option value="A+">A+</option>
-                 <option value="A">A</option>
-                 </select>
-                </div>
-                <!-- HSC SECTION -->
-    
-    
-                <div class="mb-3">
-                  <label for=""></label>  HSC <br>
-                 
-                  <select name="hsc" id="" class="form-control">
+                
+                  <label for="">Educational Qualification</label><br>
+                  SSC 
+                  <select name="ssc" id="" class="form-control">
                     <option value="">Select Board</option>
                   <option value="Dhaka">Dhaka</option>
                   <option value="Rajshahi">Rajshahi</option>
@@ -238,82 +189,32 @@ if(isset($_POST['submit'])){
                   </select>
     
                   <!-- result -->
-                  Result
-                  <select name="hsc_result" id="" class="form-control">
+                  Result 
+                  <select name="ssc_result" id=""class="form-control">
                     <option value="">Select Result</option>
                   <option value="A+">A+</option>
                   <option value="A">A</option>
+                  <option value="A-">A-</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
                   </select>
                 </div>
-    
-                <!-- END HSC SECTION -->
-                <!-- honors SECTION -->
-                <div class="mb-3">
-                  <label for=""> Graduation </label><br>
-                 
-                  <select name="graduation" id="" class="form-control">
-                    <option value="">Select University</option>
-                  <option value="Dhaka University">Dhaka University</option>
-                  <option value="Rajshahi University">Rajshahi University</option>
-                  <option value="Khulna University">Khulna University</option>
-                  <option value="Sylhet University">Sylhet University</option>
-                  <option value="Comilla University">Comilla University</option>
-                  <option value="Mymensingh University">Mymensingh University</option>
-                  <option value="Barishal University">Barishal University</option>
-                  <option value="Rangpur University">Rangpur University</option>
-                  <option value="National University">National University</option>
-                  </select> <br>
-    
-                  <!-- result -->
-                  Result
-                  <select name="col_result" id="" class="form-control">
-                    <option value="">Select Result</option>
-                  <option value="Fist Class">First Class</option>
-                  <option value="Second Class">Second Class</option>
-                  </select>
-                </div>
-    
-                 <!--end honors SECTION -->
-    
-                 <!--Masters SECTION -->
-                 <div class="mb-3">
-                  <label for="">Educational Qualification</label><br>
-                  Masters 
-                  <select name="master" id="" class="form-control">
-                    <option value="">Select University</option>
-                  <option value="Dhaka University">Dhaka University</option>
-                  <option value="Rajshahi University">Rajshahi University</option>
-                  <option value="Khulna University">Khulna University</option>
-                  <option value="Sylhet University">Sylhet University</option>
-                  <option value="Comilla University">Comilla University</option>
-                  <option value="Mymensingh University">Mymensingh University</option>
-                  <option value="Barishal University">Barishal University</option>
-                  <option value="Rangpur University">Rangpur University</option>
-                  <option value="National University">National University</option>
-                  </select>
-    
-                  <!-- result -->
-                  Result
-                  <select name="result" id="" class="form-control">
-                    <option value="">Select Result</option>
-                  <option value="First Class">First Class</option>
-                  <option value="Second Class">Second Class</option>
-                  </select>
-                </div>
-    
-                 <!--end master SECTION -->
-    
-    
                 
+    
+    
+                <div class="mb-3">
+                  <input type="number" name="brc" class="form-control" placeholder="Birth Registration certificate Number" required>
+                </div>
+                <div class="mb-3">
+                  <input type="text" name="email" class="form-control" placeholder="Input Email Here">
+                </div>
+                <div class="mb-3">
+
+
                 <div class="mb-3">
                   <input type="number" name="phone" class="form-control" placeholder="Mobile Number" required>
                 </div>
-                <div class="mb-3">
-                  <input type="text" name="email" class="form-control" placeholder="Input Your Email number" >
-                </div>
-                <div class="mb-3">
-                  <input type="number" name="brc" class="form-control" placeholder="Birth Registration certificate" required>
-                </div>
+               
                 <div class="mb-3">
                   <input type="submit" name="submit" value="Save Data" class="form-control btn btn-info" >
                 </div>
