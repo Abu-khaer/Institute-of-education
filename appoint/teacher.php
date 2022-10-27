@@ -118,14 +118,14 @@ if(isset($_POST['submit'])){
         <ul>
           <li><a  href="../index.html">Home</a></li>
           <li><a  href="../courses.html">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Enrollment</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Appointment</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li class="dropdown"><a href="#"><span>Students</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="../kg.html">KG</a></li>
-                  <li><a href="../standard 1.html">Standard 1</a></li>
-                  <li><a href="../standard 2.html">Standard 2</a></li>
-                  <li><a href="../standard 3.html">Standard 3</a></li>
+                  <li><a href="../kg.php">KG</a></li>
+                  <li><a href="../standard 1.php">Standard 1</a></li>
+                  <li><a href="../standard 2.php">Standard 2</a></li>
+                  <li><a href="../standard 3.php">Standard 3</a></li>
                   <li><a href="../standard 4.html">Standard 4</a></li>
                   <li><a href="../standard 5.html">Standard 5</a></li>
                 </ul>
@@ -139,7 +139,7 @@ if(isset($_POST['submit'])){
           <li><a href="../about.html">About</a></li>    
           <li><a href="../trainers.html">Teachers</a></li>
           <li><a href="../events.html">Events</a></li>
-          <li><a href="../notice.html">Notice</a></li>
+          <li><a href="../notice.php">Notice</a></li>
 
          
           <li><a class="active" href="contact.html">Contact</a></li>
