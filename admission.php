@@ -23,7 +23,8 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($conn, $query);
 
     if(($result)){
-     echo  "Enroll Successfull";
+     echo  "Thank you for your interest in IE! An admissions representative will contact you shortly.";
+
     }else {
       echo "Something went wrong";
     }
@@ -33,54 +34,6 @@ if(isset($_POST['submit'])){
 ?>
 
 <!-- student form -->
-<?php
-
-include_once 'config/db.php';
-
-if(isset($_POST['send'])){
-
-  $father_nid =stripslashes($_POST['father_nid']);
-  $father_nid = mysqli_real_escape_string($conn, $father_nid);
-
-  $mother_nid =stripslashes($_POST['mother_nid']);
-  $mother_nid = mysqli_real_escape_string($conn, $mother_nid);
-
-
-  $edu_qua_father = stripslashes($_POST['edu_qua_father']);
-  $edu_qua_father = mysqli_real_escape_string($conn, $edu_qua_father);
-
-  $edu_qua_mother = stripslashes($_POST['edu_qua_mother']);
-  $edu_qua_mother = mysqli_real_escape_string($conn, $edu_qua_mother);
-
-
-  $mobile_father = stripslashes($_POST['mobile_father']);
-  $mobile_father = mysqli_real_escape_string($conn, $mobile_father);
-
-  $mobile_mother = stripslashes($_POST['mobile_mother']);
-  $mobile_mother = mysqli_real_escape_string($conn, $mobile_mother);
-
-  $email_father = stripslashes($_POST['email_father']);
-  $email_father = mysqli_real_escape_string($conn, $email_father);
-
-
-  $email_mother = stripslashes($_POST['email_mother']);
-  $email_mother = mysqli_real_escape_string($conn, $email_mother);
-
-
-    $query = "INSERT INTO parents_info (father_nid, mother_nid, edu_qua_father, edu_qua_mother, mobile_father, mobile_mother, email_father, email_mother) VALUES ('$father_nid', '$mother_nid', '$edu_qua_father', '$edu_qua_mother', '$mobile_father', '$mobile_mother' '$email_father', '$email_mother')";
-
-    $result = mysqli_query($conn, $query);
-
-    if(($result)){
-     header('Location: index.html');
-    }else {
-      echo "Something went wrong";
-    }
-
-  
- }
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -131,10 +84,11 @@ if(isset($_POST['send'])){
           <li><a  href="courses.html">Gallery</a></li>
           <li class="dropdown"><a href="#"><span>Students</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
-                  <li><a href="kg.html">KG</a></li>
-                  <li><a href="standard 1.html">Standard 1</a></li>
-                  <li><a href="standard 2.html">Standard 2</a></li>
-                  <li><a href="standard 3.html">Standard 3</a></li>
+                  <li><a href="kg.php">KG</a></li>
+                  <li><a href="admission.php">Addmission</a></li>
+                  <li><a href="standard 1.php">Standard 1</a></li>
+                  <li><a href="standard 2.php">Standard 2</a></li>
+                  <li><a href="standard 3.php">Standard 3</a></li>
                   <li><a href="standard 4.html">Standard 4</a></li>
                   <li><a href="standard 5.html">Standard 5</a></li>
                 </ul>
@@ -151,7 +105,7 @@ if(isset($_POST['send'])){
           <li><a href="about.html">About</a></li>    
           <li><a href="trainers.html">Teachers</a></li>
           <li><a href="events.html">Events</a></li>
-          <li><a class="active" href="notice.html">Notice</a></li>
+          <li><a class="active" href="notice.php">Notice</a></li>
 
          
           <li><a href="contact.html">Contact</a></li>
@@ -172,7 +126,7 @@ if(isset($_POST['send'])){
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
         <h2>Addmission Form</h2>
-        <p>WStudents Addmission form KG to Standard 5. </p>
+        <p>Students Addmission form KG to Standard 5. </p>
       </div>
     </div>
 
@@ -239,74 +193,7 @@ if(isset($_POST['send'])){
       </div>
     </div>
 
-    <div class="col-lg-6">
-      <div class="card">
-      <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item">
-     <h2 class="accordion-header" id="flush-headingTwo">
-      <button class="accordion-button collapsed bg-warning text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseOne">
-      Information of applicant's parents. <a class="btn btn-danger float-end " href="#">Click Here</a>
-      </button>
-     </h2>
-       <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-      <form action="" method="post">
-          <div class="mb-3">
-            <label for="">Father's NID Number</label>
-            <input type="number" name="father_nid" class="form-control" placeholder="Father's NID numbers. " required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Mother's NID Number</label>
-            <input type="number" name="mother_nid" class="form-control" placeholder="Mother's NID numbers. " required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Educational Qualification of Father's</label>
-            <input type="text" name="edu_qua_father" class="form-control" placeholder="SSC/ HSC/ GRADUATIONS/ MASTERS" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Educational Qualification of Mother's</label>
-            <input type="text" name="edu_qua_mother" class="form-control" placeholder="SSC/ HSC/ GRADUATIONS/ MASTERS" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Mobile number of Father's</label>
-            <input type="number" name="mobile_father" class="form-control" placeholder="Mobile Number Of Father" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Mobile Number of Mother's</label>
-            <input type="number" name="mobile_mother" class="form-control" placeholder="Mobile Number Of Mother" required>
-          </div>
-
-
-
-          <div class="mb-3">
-            <label for="">Father's Email</label>
-            <input type="text" name="email_father" class="form-control" placeholder=" Father's Email" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Mother's Email</label>
-            <input type="text" name="email_mother" class="form-control" placeholder=" Mother's Email" required>
-          </div>
-
-
-          <div class="mb-3">
-          <input type="submit" name="send" value="Save Data" class="form-control btn btn-info" >
-          </div>
-          </form>
-          
-        </div>
-        </div>
-       </div>
   
-  
-     </div>
-      </div>
-    </div>
   </div>
 </div>
 

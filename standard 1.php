@@ -83,6 +83,7 @@ if(isset($_POST['submit'])){
               <li class="dropdown"><a href="#"><span>Students</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a  href="kg.html">KG</a></li>
+                  <li><a href="admission.php">Addmission</a></li>
                   <li><a class="active" href="standard 1.html">Standard 1</a></li>
                   <li><a href="standard 2.html">Standard 2</a></li>
                   <li><a href="standard 3.html">Standard 3</a></li>
