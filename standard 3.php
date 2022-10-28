@@ -114,7 +114,7 @@ if(isset($_POST['submit'])){
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
 
           <li class="dropdown"><a href="#"><span>Classes</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -126,14 +126,14 @@ if(isset($_POST['submit'])){
                   <li><a href="standard 2.php">Standard 2</a></li>
                   <li><a class="active" href="standard 3.php">Standard 3</a></li>
                   <li><a href="standard 4.php">Standard 4</a></li>
-                  <li><a href="standard 5.html">Standard 5</a></li>
+                  <li><a href="standard 5.php">Standard 5</a></li>
                 </ul>
               </li>
              
              
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
