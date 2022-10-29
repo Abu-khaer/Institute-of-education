@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Contact - INSTITUTE OF EDUCATION</title>
+  <title>Staff - INSTITUTE OF EDUCATION</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -88,7 +88,7 @@ if(isset($_POST['submit'])){
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">INSTITUTE OF EDUCATION</a></h1>
+      <h1 class="logo me-auto"><a href="index.php">INSTITUTE OF EDUCATION</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -109,7 +109,7 @@ if(isset($_POST['submit'])){
                 </ul>
               </li>
               <li><a href="../notice.php">Teachers</a></li>
-              <li><a href="../notice.php">Stuff</a></li>
+              <li><a class="active" href="../notice.php">Staff</a></li>
             </ul>
           </li>
           <li><a href="../about.php">About</a></li>    
@@ -118,7 +118,7 @@ if(isset($_POST['submit'])){
           <li><a href="../notice.php">Notice</a></li>
 
          
-          <li><a class="active" href="contact.php">Contact</a></li>
+          <li><a  href="contact.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
         
@@ -134,7 +134,7 @@ if(isset($_POST['submit'])){
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>Stuff Appointment</h2>
+        <h2>Staff Appointment</h2>
         <p> </p>
       </div>
     </div><!-- End Breadcrumbs -->
@@ -146,7 +146,7 @@ if(isset($_POST['submit'])){
   <div class="accordion-item">
     <h2 class="accordion-header " id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-       <span class="text-bg-warning"><strong>Stuff Application Form.</strong> <a class="btn btn-danger btn-sm" href="#"> Click Here </a></span>
+       <span class="text-bg-warning"><strong>Staff Application Form.</strong> <a class="btn btn-danger btn-sm" href="#"> Click Here </a></span>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
@@ -154,7 +154,7 @@ if(isset($_POST['submit'])){
         <div class="col-lg-6">
           <div class="card">
             <div class="card-header bg-danger">
-              <div class="card-title text-center text-light"><h2>Stuff Application Form</h2></div>
+              <div class="card-title text-center text-light"><h2>Staff Application Form</h2></div>
             </div>
             <div class="card-body">
             <form action="" method="post">

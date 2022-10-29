@@ -38,39 +38,46 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">INSTITUTE OF EDUCATION</a></h1>
+      <h1 class="logo me-auto"><a href="index.php">INSTITUTE OF EDUCATION</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a  href="index.php">Home</a></li>
-          <li><a  href="courses.php">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Students</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a href="admission.php">Addmission</a></li>
+          <li class="dropdown"><a href="#"><span>Appointment</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="appoint/teacher.php">Teacher</a></li>
+              <li><a href="appoint/stuff.php">Staff</a></li>
+              <li><a href="appoint/account.php">Accountant</a></li>
+             
+            </ul>
+          </li>
+         
+          <li class="dropdown"><a href="#"><span>Classes</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   <li><a href="kg.php">KG</a></li>
-                  <li><a href="admission.php">Addmission</a></li>
+                  
                   <li><a href="standard 1.php">Standard 1</a></li>
                   <li><a href="standard 2.php">Standard 2</a></li>
                   <li><a href="standard 3.php">Standard 3</a></li>
                   <li><a href="standard 4.php">Standard 4</a></li>
                   <li><a href="standard 5.php">Standard 5</a></li>
                 </ul>
+         
+              
           </li>
-          <li class="dropdown"><a href="#"><span>Appointment</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="appoint/teacher.php">Teacher</a></li>
-              <li><a href="appoint/stuff.php">Stuff</a></li>
-             
-            </ul>
-          </li>
-          <li><a href="about.php">About</a></li>    
           <li><a href="trainers.php">Teachers</a></li>
-          <li><a href="events.php">Events</a></li>
+          <li><a  href="courses.php">Gallery</a></li>
+          
+          <!-- <li><a class="active" href="about.php">About</a></li>     -->
+         
+          <!-- <li><a href="events.php">Events</a></li> -->
           <li><a class="active" href="notice.php">Notice</a></li>
 
          
-          <li><a href="contact.php">Contact</a></li>
+          <li><a  href="contact.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
         
@@ -96,10 +103,9 @@
 </main><!-- End #main -->
 <div class="marquee">
   <marquee behavior="scroll" direction="fade-left"><h4>Notice:  Last date of submission for Students:
-    15 December, 2022. --  Last Date of Teachers and stuff's application 31 October 2022.</h4></marquee>
+    15 December, 2022. --  Last Date of Teachers and staff's application 31 October 2022.</h4></marquee>
 </div>
 
-<a class="btn btn-danger" href="#teacher_enroll">Click Here To get form</a>
 <div class="container-fluid">
   <div class="row mt-5">
     <div class="col-lg-5">
@@ -154,7 +160,7 @@
 </div>
 
 <!-- acordin -->
-
+<!-- 
 <div class="accordion" id="accordionPanelsStayOpenExample">
  <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -245,7 +251,7 @@
                   </select>
     
                   <!-- result -->
-                  Result 
+                  <!-- Result 
                   <select name="" id=""class="form-control">
                     <option value="option">Select Result</option>
                   <option value="option">A+</option>
@@ -288,7 +294,7 @@
   
   
             
-</div>
+</div>  -->
 
 <!-- end accordin -->
 

@@ -43,33 +43,40 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active"  href="index.php">Home</a></li>
-          <li><a  href="courses.php">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Students</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="active" href="index.php">Home</a></li>
+          <li><a href="admission.php">Addmission</a></li>
+          <li class="dropdown"><a href="#"><span>Appointment</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="appoint/teacher.php">Teacher</a></li>
+              <li><a href="appoint/stuff.php">Staff</a></li>
+              <li><a href="appoint/account.php">Accountant</a></li>
+             
+            </ul>
+          </li>
+         
+          <li class="dropdown"><a href="#"><span>Classes</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
-                  <li><a href="admission.php">Addmission</a></li>
                   <li><a href="kg.php">KG</a></li>
+                  
                   <li><a href="standard 1.php">Standard 1</a></li>
                   <li><a href="standard 2.php">Standard 2</a></li>
                   <li><a href="standard 3.php">Standard 3</a></li>
                   <li><a href="standard 4.php">Standard 4</a></li>
                   <li><a href="standard 5.php">Standard 5</a></li>
                 </ul>
+         
+              
           </li>
-          <li class="dropdown"><a href="#"><span>Appointment</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="appoint/teacher.php">Teacher</a></li>
-              <li><a href="appoint/stuff.php">Stuff</a></li>
-              <li><a href="appoint/account.php">Accountant</a></li>
-            </ul>
-          </li>
-          <li><a  href="about.php">About</a></li>    
           <li><a href="trainers.php">Teachers</a></li>
-          <li><a href="events.php">Events</a></li>
+          <li><a  href="courses.php">Gallery</a></li>
+          
+          <!-- <li><a class="active" href="about.php">About</a></li>     -->
+         
+          <!-- <li><a href="events.php">Events</a></li> -->
           <li><a href="notice.php">Notice</a></li>
 
          
-          <li><a href="contact.php">Contact</a></li>
+          <li><a  href="contact.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
         
@@ -79,7 +86,7 @@
 
     </div>
     <div class="marquee">
-      <marquee behavior="scroll" direction="fade-left">Notice: IE will start its Academic session from 1 jamuary 2023. --  <a href="notice.html">We are looking for experienced Teacher. Send your CV to be part of IE.</a> Last date is 31 Octobar 2022 .</marquee>
+      <marquee behavior="scroll" direction="fade-left">Notice: IE will start its Academic session from 1 january 2023. --  <a href="notice.html">We are looking for experienced Teacher. Send your CV to be part of IE.</a> Last date is 31 Octobar 2022 .</marquee>
     </div>
   </header><!-- End Header -->
   
@@ -157,8 +164,7 @@
              <p class="fst-italic">
               Our vision is to empower students to acquire, demonstrate, articulate and value knowledge and skills that will support them to participate in and contribute to the global world.<br>
 
-              Core values of the institute Excellence through Respect, Tolerance and Inclusion.
-              Core values Achieving Excellence through Respect to others, sharing knowledge and Inclusion.
+              
              </p>
            </div>
          </div>
@@ -203,9 +209,10 @@
             <div class="content">
               <h3>Why You Should Choose IE?</h3>
               <p>
-                Special emphasis will be given on English, Math and General knowledge for the enrichment of students.
+                Accademic rich environment, Scholership, Extra Curriculum activities, no need to take private tuition as extra class will be arranged for solving problems. 
+                Special emphasis will be given on English, Math and General knowledge, Arabic learning and moral studies for the enrichment of students.
 
-                Course related problems will be solved in class room. There will be no need to take extra/ private tution in house.
+                <!-- Course related problems will be solved in class room. There will be no need to take extra/ private tution in house. -->
               </p>
               <div class="text-center">
                 <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
