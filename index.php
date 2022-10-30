@@ -155,7 +155,7 @@
             <p class="fst-italic">
               Our mission is to provide exceptional care to students while fostering their intellectual, social, physical and moral development in an academic-rich environment.<br>
               <br>
-              And change the way education meets the future; to foster interdisciplinary, integrated thinking and innovative leadership; to engage fully in the global community; and to facilitate lifelong learning.
+              
             
             </p>
            </div>
