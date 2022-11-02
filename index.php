@@ -44,7 +44,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="active" href="index.php">Home</a></li>
-          <li><a href="admission.php">Addmission</a></li>
+          <li><a href="#admission.php">Addmission</a></li>
           <li class="dropdown"><a href="#"><span>Appointment</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="appoint/teacher.php">Teacher</a></li>
@@ -58,11 +58,12 @@
                 <ul>
                   <li><a href="kg.php">KG</a></li>
                   
-                  <li><a href="standard 1.php">Standard 1</a></li>
-                  <li><a href="standard 2.php">Standard 2</a></li>
-                  <li><a href="standard 3.php">Standard 3</a></li>
-                  <li><a href="standard 4.php">Standard 4</a></li>
-                  <li><a href="standard 5.php">Standard 5</a></li>
+                  <li><a href="standard1.php">Standard 1</a></li>
+                  <li><a href="standard2.php">Standard 2</a></li>
+                  <li><a href="standard3.php">Standard 3</a></li>
+                  <li><a href="standard4.php">Standard 4</a></li>
+                  <li><a href="standard5.php">Standard 5</a></li>
+                  
                 </ul>
          
               

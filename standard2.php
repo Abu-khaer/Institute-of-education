@@ -19,15 +19,13 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($conn, $query);
 
     if(($result)){
-     echo  "Enroll Successfull";
+     echo  " alert(Enroll Successfull)";
     }else {
       echo "Something went wrong";
     }
 
   
  }
-
-
 ?>
 
 
@@ -38,7 +36,7 @@ if(isset($_POST['submit'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Standard 1 - INSTITUTE OF EDUCATION</title>
+  <title>Standard 2 - INSTITUTE OF EDUCATION</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -85,11 +83,11 @@ if(isset($_POST['submit'])){
                 <ul>
                   <li><a  href="kg.php">KG</a></li>
                   <li><a href="admission.php">Addmission</a></li>
-                  <li><a href="standard 1.php">Standard 1</a></li>
-                  <li><a class="active" href="standard 2.php">Standard 2</a></li>
-                  <li><a href="standard 3.php">Standard 3</a></li>
-                  <li><a href="standard 4.php">Standard 4</a></li>
-                  <li><a href="standard 5.php">Standard 5</a></li>
+                  <li><a href="standard1.php">Standard 1</a></li>
+                  <li><a class="active" href="standard2.php">Standard 2</a></li>
+                  <li><a href="standard3.php">Standard 3</a></li>
+                  <li><a href="standard4.php">Standard 4</a></li>
+                  <li><a href="standard5.php">Standard 5</a></li>
                 </ul>
               </li>
              
@@ -116,7 +114,7 @@ if(isset($_POST['submit'])){
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>Class KG</h2>
+        <h2>Standard 2</h2>
         <p>This is primary section Of our Grade level.
           student play and enjoy here and learn some basic point of study. </p>
       </div>
@@ -145,7 +143,7 @@ if(isset($_POST['submit'])){
             <input type="text" name="father_name" class="form-control" placeholder="fathers_name " required>
           </div>
           <div class="mb-3">
-            <input type="number" name="brc" class="form-control" placeholder="Birt Registration certificate" required>
+            <input type="number" name="brc" class="form-control" placeholder="Birth Registration certificate" required>
           </div>
           <div class="mb-3">
             
@@ -162,8 +160,7 @@ if(isset($_POST['submit'])){
    
 
   </main><!-- End #main -->
-
-
+  
   <section class="kg" id="kg_class">
     <div class="container">
       <div class="row ">
@@ -240,7 +237,7 @@ if(isset($_POST['submit'])){
   </div>
   </section>
  
-  
+
  
   <!-- ======= Footer ======= -->
   <footer id="footer">

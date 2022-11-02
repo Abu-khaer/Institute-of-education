@@ -52,11 +52,11 @@
                 <ul>
                   <li><a class="active" href="kg.php">KG</a></li>
                   <li><a href="admission.php">Addmission</a></li>
-                  <li><a href="standard 1.php">Standard 1</a></li>
-                  <li><a href="standard 2.php">Standard 2</a></li>
-                  <li><a href="standard 3.php">Standard 3</a></li>
-                  <li><a class="active" href="standard 4.php">Standard 4</a></li>
-                  <li><a href="standard 5.php">Standard 5</a></li>
+                  <li><a href="standard1.php">Standard 1</a></li>
+                  <li><a href="standard2.php">Standard 2</a></li>
+                  <li><a href="standard3.php">Standard 3</a></li>
+                  <li><a class="active" href="standard4.php">Standard 4</a></li>
+                  <li><a href="standard5.php">Standard 5</a></li>
                 </ul>
               </li>
              

@@ -28,45 +28,7 @@ if(isset($_POST['submit'])){
  }
 
 
-
-
 ?>
-
-
-<?php
-include_once 'config/db.php';
-
-if(isset($_POST['submit'])){
-
-  $name =stripslashes($_POST['name']);
-  $name = mysqli_real_escape_string($conn, $name);
-  $mother_name = stripslashes($_POST['mother_name']);
-  $mother_name = mysqli_real_escape_string($conn, $mother_name);
-  $father_name = stripslashes($_POST['father_name']);
-  $father_name = mysqli_real_escape_string($conn, $father_name);
-  $brc = stripslashes($_POST['brc']);
-  $brc = mysqli_real_escape_string($conn, $brc);
-
-
-
-    $query = "INSERT INTO student (name, mother_name, father_name, brc) VALUES ('$name', '$mother_name', '$father_name', '$brc')";
-
-    $result = mysqli_query($conn, $query);
-
-    if(($result)){
-     echo  "Enroll Successfull";
-    }else {
-      echo "Something went wrong";
-    }
-
-  
- }
-
-
-
-
-?>
-
 
 
 <!DOCTYPE html>
@@ -76,7 +38,7 @@ if(isset($_POST['submit'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Standard 3 - INSTITUTE OF EDUCATION</title>
+  <title>Standard 1 - INSTITUTE OF EDUCATION</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -123,11 +85,11 @@ if(isset($_POST['submit'])){
                 <ul>
                   <li><a  href="kg.php">KG</a></li>
                   <li><a href="admission.php">Addmission</a></li>
-                  <li><a href="standard 1.php">Standard 1</a></li>
-                  <li><a href="standard 2.php">Standard 2</a></li>
-                  <li><a class="active" href="standard 3.php">Standard 3</a></li>
-                  <li><a href="standard 4.php">Standard 4</a></li>
-                  <li><a href="standard 5.php">Standard 5</a></li>
+                  <li><a class="active" href="standard1.php">Standard 1</a></li>
+                  <li><a  href="standard2.php">Standard 2</a></li>
+                  <li><a href="standard3.php">Standard 3</a></li>
+                  <li><a href="standard4.php">Standard 4</a></li>
+                  <li><a href="standard5.php">Standard 5</a></li>
                 </ul>
               </li>
              
@@ -154,7 +116,7 @@ if(isset($_POST['submit'])){
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>Standard 3</h2>
+        <h2>Class KG</h2>
         <p>This is primary section Of our Grade level.
           student play and enjoy here and learn some basic point of study. </p>
       </div>
@@ -183,101 +145,24 @@ if(isset($_POST['submit'])){
             <input type="text" name="father_name" class="form-control" placeholder="fathers_name " required>
           </div>
           <div class="mb-3">
-            <input type="number" name="brc" class="form-control" placeholder="Birth Registration certificate" required>
+            <input type="number" name="brc" class="form-control" placeholder="Birt Registration certificate" required>
           </div>
           <div class="mb-3">
-          <input type="submit" name="submit" value="Save Data" class="form-control btn btn-info" >
-          </form>
+            
           </div>
        
       </div>
       <div class="modal-footer">
-        
+        <input type="submit" name="submit" value="Save Data" class="form-control btn btn-info" >
       </div>
-   
+    </form>
     </div>
   </div>
 </div>
-   <!-- end modal 1 -->
-
-
-<!-- start modal 2 -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Information oF Applicant's Parents</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="" method="post">
-          <div class="mb-3">
-            <label for="">Father's NID Number</label>
-            <input type="number" name="father_nid" class="form-control" placeholder="Father's NID numbers. " required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Mother's NID Number</label>
-            <input type="number" name="mother_nid" class="form-control" placeholder="Mother's NID numbers. " required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Educational Qualification of Father's</label>
-            <input type="text" name="edu_qua_father" class="form-control" placeholder="SSC/ HSC/ GRADUATIONS/ MASTERS" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Educational Qualification of Mother's</label>
-            <input type="text" name="edu_qua_mother" class="form-control" placeholder="SSC/ HSC/ GRADUATIONS/ MASTERS" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Mobile number of Father's</label>
-            <input type="number" name="mobile_father" class="form-control" placeholder="Mobile Number Of Father" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Mobile Number of Mother's</label>
-            <input type="number" name="mobile_mother" class="form-control" placeholder="Mobile Number Of Mother" required>
-          </div>
-
-
-
-          <div class="mb-3">
-            <label for="">Father's Email</label>
-            <input type="text" name="email_father" class="form-control" placeholder=" Father's Email" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="">Mother's Email</label>
-            <input type="text" name="email_mother" class="form-control" placeholder=" Mother's Email" required>
-          </div>
-
-
-          <div class="mb-3">
-          <input type="submit" name="send" value="Save Data" class="form-control btn btn-info" >
-          </div>
-          </form>
-          
-       
-      </div>
-      <div class="modal-footer">
-        
-      </div>
    
-    </div>
-  </div>
-</div>
-
-
-<!-- end modal 2 -->
-
 
   </main><!-- End #main -->
-  
+
 
   <section class="kg" id="kg_class">
     <div class="container">
@@ -289,11 +174,9 @@ if(isset($_POST['submit'])){
               <div class="card-body  bg-success">
                 <ol class="text-warning">
                   <li> Bangla </li>
-                  <li>English (Grammar and literature)</li>
+                  <li>English</li>
                   <li>Math</li>
                   <li>Arabic and moral study</li>
-                  <li>Bangladesh studies</li>
-                  <li>International studies </li>
                 </ol>
 
               </div>
@@ -357,6 +240,7 @@ if(isset($_POST['submit'])){
   </div>
   </section>
  
+  
  
   <!-- ======= Footer ======= -->
   <footer id="footer">
